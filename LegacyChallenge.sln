@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyWebApplication", "LegacyWebApplication\LegacyWebApplication.csproj", "{D8CA48D3-34E8-4DF5-817B-5B10AADE8AC1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External Assemblies", "External Assemblies", "{40B6D327-87A7-454B-9D90-8B4B6C73B820}"
+	ProjectSection(SolutionItems) = preProject
+		External Assemblies\LegacyFramework.dll = External Assemblies\LegacyFramework.dll
+		External Assemblies\LegacyQuestTracker.dll = External Assemblies\LegacyQuestTracker.dll
+		External Assemblies\Microsoft.Web.Infrastructure.dll = External Assemblies\Microsoft.Web.Infrastructure.dll
+		External Assemblies\System.Web.Helpers.dll = External Assemblies\System.Web.Helpers.dll
+		External Assemblies\System.Web.Mvc.dll = External Assemblies\System.Web.Mvc.dll
+		External Assemblies\System.Web.Razor.dll = External Assemblies\System.Web.Razor.dll
+		External Assemblies\System.Web.WebPages.Deployment.dll = External Assemblies\System.Web.WebPages.Deployment.dll
+		External Assemblies\System.Web.WebPages.dll = External Assemblies\System.Web.WebPages.dll
+		External Assemblies\System.Web.WebPages.Razor.dll = External Assemblies\System.Web.WebPages.Razor.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8CA48D3-34E8-4DF5-817B-5B10AADE8AC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8CA48D3-34E8-4DF5-817B-5B10AADE8AC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8CA48D3-34E8-4DF5-817B-5B10AADE8AC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8CA48D3-34E8-4DF5-817B-5B10AADE8AC1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C2AD54C6-AE1E-448E-9EF1-B3057B268B3A}
+	EndGlobalSection
+EndGlobal
