@@ -1,0 +1,99 @@
+﻿@inherits System.Web.Mvc.WebViewPage<IEnumerable<LegacyQuestTracker.Quest>>
+@{
+    Layout = null;
+    int itr = 0;
+}
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Legacy Web Application</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <!-- include rpgui -->
+    <link href="./../Styles/rpgui.min.css" rel="stylesheet" type="text/css">
+    <script src="./../Styles/rpgui.min.js"></script>
+    <style>
+
+        body, #container {
+            background: #aaf;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .inner {
+            background: #444;
+            padding-left: 20px;
+            padding-right: 20px;
+            min-width: 740px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+          
+        .rpgui-container {
+            font-size: 10px;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .quest:hover label {
+            color: #ff0;
+        }
+    </style>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            [].forEach.call(document.querySelectorAll('div.quest'), function (quest) {
+                quest.addEventListener('click', function () {
+                    [].forEach.call(document.querySelectorAll('div.details'), function (details) {
+                        details.classList.add("hide");
+                        if (details.id === 'details_' + quest.id) {
+                            details.classList.toggle("hide");
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="rpgui-content rpgui-cursor-default" style="overflow-y:scroll;">
+        <div id="container">
+            <div id="main"></div>
+            <div class="inner rpgui-container framed" style="position:relative">
+                <header>
+                    <h1 style="font-size:250%">Legacy Web Application</h1>
+                    <hr class="golden">
+                    <h2 style="font-size:175%">Hi @ViewBag.Name, are you ready for the challenge ?</h2>
+                </header>
+                
+                <div class="rpgui-container framed-grey" style="display:inline-block; width: 100%;">
+                    <div>
+                        <div class="rpgui-container framed-golden-2" style="position:relative; width:47%; float:left;">
+                            <h1>Quest book</h1>
+                            <hr />
+                            @foreach (var item in Model)
+                            {
+                                <div class="quest rpgui-cursor-point" id="@(itr++)">
+                                    <input type="checkbox" data-rpguitype="checkbox" class="rpgui-checkbox" @(item.IsCompleted ? "checked" : "")>
+                                    <label>@item.Title</label>
+                                </div>
+                            }
+                        </div>
+
+
+                        @{itr = 0;}
+                        @foreach (var item in Model)
+                        {
+                            <div class="details hide rpgui-container framed-golden" id="@("details_" + itr++)" style="position:relative; width:47%; float:right;">
+                                <h1>@item.Title</h1>
+                                <hr />
+                                <span>@item.Objective</span>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

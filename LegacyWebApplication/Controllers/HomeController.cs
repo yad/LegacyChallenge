@@ -1,13 +1,28 @@
-﻿using System.Web.Mvc;
+﻿using LegacyQuestTracker;
+using System.Collections.Generic;
+using System.Web.Mvc;
+using System.Web.Mvc.Async;
 
 namespace LegacyWebApplication.Controllers
 {
     [Authorize]
-    public class HomeController : Controller
+    public class HomeController : AsyncController
     {
-        public ActionResult Index()
+        [HttpGet]
+        public void IndexAsync()
         {
-            return Content(string.Format("Welcome {0} !", HttpContext.User.Identity.Name));
+            ViewBag.Name = HttpContext.User.Identity.Name;
+            AsyncManager.OutstandingOperations.Increment();
+            new QuestBook().GetQuests().ContinueWith((result) =>
+            {
+                AsyncManager.Parameters["quests"] = result.Result;
+                AsyncManager.OutstandingOperations.Decrement();
+            });
+        }
+
+        public ActionResult IndexCompleted(IEnumerable<Quest> quests)
+        {
+            return View(quests);
         }
     }
 }

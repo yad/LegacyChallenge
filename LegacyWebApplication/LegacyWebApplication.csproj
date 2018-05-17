@@ -92,7 +92,80 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Styles\img\background-image-golden.png" />
+    <Content Include="Styles\img\background-image-golden2.png" />
+    <Content Include="Styles\img\background-image-grey.png" />
+    <Content Include="Styles\img\background-image.png" />
+    <Content Include="Styles\img\border-image-golden.png" />
+    <Content Include="Styles\img\border-image-golden2.png" />
+    <Content Include="Styles\img\border-image-grey.png" />
+    <Content Include="Styles\img\border-image.png" />
+    <Content Include="Styles\img\button-background.png" />
+    <Content Include="Styles\img\button-down.png" />
+    <Content Include="Styles\img\button-golden-down.png" />
+    <Content Include="Styles\img\button-golden-hover.png" />
+    <Content Include="Styles\img\button-golden-left.png" />
+    <Content Include="Styles\img\button-golden-right.png" />
+    <Content Include="Styles\img\button-golden.png" />
+    <Content Include="Styles\img\button-hover.png" />
+    <Content Include="Styles\img\button.png" />
+    <Content Include="Styles\img\checkbox-golden-off.png" />
+    <Content Include="Styles\img\checkbox-golden-on.png" />
+    <Content Include="Styles\img\checkbox-off.png" />
+    <Content Include="Styles\img\checkbox-on.png" />
+    <Content Include="Styles\img\cursor\cursor.cur" />
+    <Content Include="Styles\img\cursor\default.png" />
+    <Content Include="Styles\img\cursor\grab-close.png" />
+    <Content Include="Styles\img\cursor\grab-open.png" />
+    <Content Include="Styles\img\cursor\point.png" />
+    <Content Include="Styles\img\cursor\select.png" />
+    <Content Include="Styles\img\hr-golden.png" />
+    <Content Include="Styles\img\hr.png" />
+    <Content Include="Styles\img\icons\armor-slot.png" />
+    <Content Include="Styles\img\icons\empty-slot.png" />
+    <Content Include="Styles\img\icons\exclamation.png" />
+    <Content Include="Styles\img\icons\helmet-slot.png" />
+    <Content Include="Styles\img\icons\magic-slot.png" />
+    <Content Include="Styles\img\icons\potion-blue.png" />
+    <Content Include="Styles\img\icons\potion-green.png" />
+    <Content Include="Styles\img\icons\potion-red.png" />
+    <Content Include="Styles\img\icons\potion-slot.png" />
+    <Content Include="Styles\img\icons\ring-slot.png" />
+    <Content Include="Styles\img\icons\shield-slot.png" />
+    <Content Include="Styles\img\icons\shield.png" />
+    <Content Include="Styles\img\icons\shoes-slot.png" />
+    <Content Include="Styles\img\icons\sword.png" />
+    <Content Include="Styles\img\icons\weapon-slot.png" />
+    <Content Include="Styles\img\progress-bar-left.png" />
+    <Content Include="Styles\img\progress-bar-right.png" />
+    <Content Include="Styles\img\progress-bar-track.png" />
+    <Content Include="Styles\img\progress-blue.png" />
+    <Content Include="Styles\img\progress-green.png" />
+    <Content Include="Styles\img\progress-red.png" />
+    <Content Include="Styles\img\progress.png" />
+    <Content Include="Styles\img\radio-golden-off.png" />
+    <Content Include="Styles\img\radio-golden-on.png" />
+    <Content Include="Styles\img\radio-off.png" />
+    <Content Include="Styles\img\radio-on.png" />
+    <Content Include="Styles\img\scrollbar-button.png" />
+    <Content Include="Styles\img\scrollbar-thumb.png" />
+    <Content Include="Styles\img\scrollbar-track.png" />
+    <Content Include="Styles\img\select-background-image.png" />
+    <Content Include="Styles\img\select-border-image.png" />
+    <Content Include="Styles\img\slider-left-golden.png" />
+    <Content Include="Styles\img\slider-left.png" />
+    <Content Include="Styles\img\slider-right-golden.png" />
+    <Content Include="Styles\img\slider-right.png" />
+    <Content Include="Styles\img\slider-thumb-golden.png" />
+    <Content Include="Styles\img\slider-thumb.png" />
+    <Content Include="Styles\img\slider-track-golden.png" />
+    <Content Include="Styles\img\slider-track.png" />
+    <Content Include="Styles\rpgui.min.css" />
+    <Content Include="Styles\rpgui.min.js" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -107,12 +180,14 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppServiceLocator.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
